@@ -1,0 +1,29 @@
+{
+  "name": "requestbin",
+  "scripts": {
+  },
+  "env": {
+    "foo": {
+      "required": true
+    },
+    "REALM": {
+      "required": true
+    },
+    "REDIS_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
